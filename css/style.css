@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Dark-blue: #0A3871;
+}
+
+body {
+    background-color: #F3F5FC;
+    font-family: 'Inter';
+}
+
+header {
+    height: 96px;
+    width: 100%;
+    position: relative;
+}
+
+.logo img {
+    position: absolute;
+    left: 4.27%;
+    right: 87.2%;
+    top: 25%;
+    bottom: 25%;
+}
+
+.main-content {
+    padding: 1rem;
+}
+
+.text-to-encript textarea {
+    width: 343px;
+    height: 300px;
+    background-color: #F3F5FC;
+    border: none;
+    resize: none;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--Dark-blue);
+    /* line-height: 48px; */
+}
+
+::placeholder {
+    color: var(--Dark-blue);
+    font-size: 1.4rem;
+}
+
+.warning-container {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0 1rem;
+}
+
+.warning-container img {
+    width: 1rem;
+    height: 1rem;
+}
+
+.warning-container p {
+    padding-left: 0.5rem;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.buttons button {
+    width: 340px;
+    height: 60px;
+    border-radius: 1.1rem;
+    font-size: 0.8rem;
+    transition: all 1s;
+}
+
+.encriptar {
+    background-color: var(--Dark-blue);
+    color: white;
+    border: none;
+}
+
+.encriptar:hover {
+    background-color: #F3F5FC;
+    border: 1px solid var(--Dark-blue);
+    font-size: 1rem;
+    color: var(--Dark-blue);
+}
+
+.desencriptar {
+    background-color: #F3F5FC;
+    color: var(--Dark-blue);
+    border: 1px solid var(--Dark-blue);
+}
+
+.desencriptar:hover {
+    background-color: var(--Dark-blue);
+    color: #F3F5FC;
+}
+
+.hidden {
+    display: none;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 2rem;
+    gap: 1rem;
+}
+
+.card-container strong {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.resultado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.resultado textarea {
+    width: 279px;
+    height: 300px;
+    background-color: #FFFFFF;
+    border: none;
+    resize: none;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--Dark-blue);
+}
+
+.resultado button {
+    width: 300px;
+    height: 60px;
+    border-radius: 1.1rem;
+    border: 1px solid var(--Dark-blue);
+    background-color: #ffffff;
+}
+
+
+@media screen and (min-width: 768px) {
+    .text-to-encript textarea {
+        width: 100%;
+        padding-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    ::placeholder {
+        font-size: 2rem;
+    }
+
+    .buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .card-container {
+        margin: 2.5rem;
+    }
+
+    .warning-container {
+        margin: 0 1.5rem;
+    }
+
+    .card-container {
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .main-card-container {
+        display: flex;
+        /* flex-wrap: wrap; */
+        justify-content: center;
+        /* max-width: 95%; */
+    }
+
+    .buttons button {
+        width: 280px;
+    }
+
+    .main-content {
+        padding: 2rem 2rem 2rem 8rem;
+    }
+
+    .warning-container {
+        margin: 0;
+    }
+
+    .card-container {
+        width: 350px;
+        flex-direction: column;
+        padding: 5rem 1rem 2rem;
+        position: relative;
+        top: -60px;
+    }
+
+    .card-text {
+        padding-bottom: 2.9rem;
+    }
+
+    .text-to-encript textarea {
+        height: 350px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .resultado {
+        gap: 107px;
+    }
+
+    .resultado textarea {
+        position: relative;
+        top: -60px;
+    }
+}
+
+@media screen and (min-width: 1050px) {
+    .card-container {
+        /* position: relative;
+        top: -65px; */
+    }
+}
+
+@media screen and (max-width: 999px) {
+    .card-image {
+        display: none;
+    }
+}
+
+.hidden {
+    display: none;
+}
