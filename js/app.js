@@ -29,7 +29,7 @@ function cargarEventListeners() {
     btnUncript.addEventListener('click', clearTextArea);
 
     // clear result textarea
-    btnCopy.addEventListener('click', clearTextArea)
+    btnCopy.addEventListener('click', clearTextArea);
 }
 
 function hiddenDivs() {
@@ -49,7 +49,7 @@ function encriptar() {
     if (texto != "") {
         for (let i = 0; i < texto.length; i++) {
             if (texto[i] === "e") {
-                resultado = "enter";
+                resultado = resultado + "enter";
             } else if (texto[i] === "i") {
                 resultado = resultado + "imes"
             } else if (texto[i] === "a") {
@@ -63,7 +63,7 @@ function encriptar() {
             }
         }
     }
-    texto.value = "";
+    // texto.value = "";
     textareaResultado.value = resultado;
     console.log(texto)
 }
@@ -87,4 +87,5 @@ function clearTextArea() {
 }
 
 // VER FORMA DE HACER FUNCION PARA EL TOOGLE CLASS, Y LLAMARLA EN EL LISTENER. PARA SIMPLIFICAR CODIGO
-// gobernzailober
+// AGREGAR CON ANIMACION PARA CUANDO CAMBIA DE DIVS, SE PUEDE HACER CON SL SETtIMEOUT Y CSS, PROBAR
+
