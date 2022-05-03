@@ -201,13 +201,6 @@ footer p {
 }
 
 @media screen and (min-width: 1000px) {
-    /* .main-card-container {
-        display: flex;
-        justify-content: center;
-        max-width: 940px;
-        margin: 0 auto;
-    } */
-
     .buttons button {
         width: 280px;
     }
@@ -246,7 +239,7 @@ footer p {
     .logo img {
         top: 50%;
     }
-    
+
     .resultado {
         gap: 107px;
     }
@@ -254,13 +247,6 @@ footer p {
     .resultado textarea {
         position: relative;
         top: -60px;
-    }
-}
-
-@media screen and (min-width: 1050px) {
-    .card-container {
-        /* position: relative;
-        top: -65px; */
     }
 }
 
@@ -278,7 +264,7 @@ footer p {
 
     .card-container strong {
         font-size: 29px;
-        
+
     }
 
     .result-swap {
@@ -290,9 +276,4 @@ footer p {
     .card-image {
         display: none;
     }
-}
-
-.fadeOut {
-	opacity: 0;
-	transition: 0.5s;
 }

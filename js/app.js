@@ -12,10 +12,10 @@ const divTextHidden = document.querySelector('.result-swap');
 cargarEventListeners();
 
 function cargarEventListeners() {
-    // funcion encriptar
+    // function encriptar
     btnEncript.addEventListener("click", encriptar);
 
-    // funcion desencriptar
+    // function desencriptar
     btnUncript.addEventListener('click', desEncriptar);
 
     // Add and remove 'hidden' class
@@ -48,9 +48,9 @@ function encriptar() {
     let resultado = "";
     let validador = /^[a-z]+$/gm;
 
-    
+
     if (texto != "") {
-        if(texto.match(validador)) {
+        if (texto.match(validador)) {
             for (let i = 0; i < texto.length; i++) {
                 if (texto[i] === "e") {
                     resultado = resultado + "enter";
@@ -66,7 +66,7 @@ function encriptar() {
                     resultado = resultado + texto[i];
                 }
             }
-        } else{
+        } else {
             alert("Por favor, ingresar solamente letras minusculas. No se aceptan numeros ni caracteres especiales");
         }
     }
@@ -77,12 +77,10 @@ function encriptar() {
 
 function desEncriptar() {
     let texto = inputTextArea.value;
-    console.log(texto)
     let resultado = "";
     let validador = /^[a-z]+$/gm;
-
     if (texto != "") {
-        if(texto.match(validador)) {
+        if (texto.match(validador)) {
             resultado = texto.replaceAll('enter', 'e').replaceAll('imes', 'i').replaceAll('ai', 'a').replaceAll('ober', 'o').replaceAll('ufat', 'u')
         } else {
             alert("Por favor, ingresar solamente letras minusculas. No se aceptan numeros ni caracteres especiales");
@@ -103,15 +101,3 @@ function copyButton() {
 function clearTextArea() {
     inputTextArea.value = "";
 };
-
-// VER FORMA DE HACER FUNCION PARA EL TOOGLE CLASS, Y LLAMARLA EN EL LISTENER. PARA SIMPLIFICAR CODIGO
-// AGREGAR CON ANIMACION PARA CUANDO CAMBIA DE DIVS, SE PUEDE HACER CON SL SETtIMEOUT Y CSS, PROBAR
-
-
-// tabla.addEventListener('dblclick', function (e) {
-//     e.target.parentNode.classList.add('fadeOut');
-//     setTimeout(function () {
-//         e.target.parentNode.remove();
-//     }, 500);
-// }); // Usamos el parentNode para que NO elimine solo la celda donde hago click, sino la fila completa por eso se va al padre y lo elimina con el remove
-// el setTimeout es para que espere antes de ejecutar el conmando de borrar, para que se vea la animacion ya que sino se ejecuta muy rapido
