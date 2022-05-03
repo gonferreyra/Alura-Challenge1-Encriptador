@@ -46,7 +46,8 @@ function hiddenDivs() {
 function encriptar() {
     let texto = inputTextArea.value;
     let resultado = "";
-    let validador = /^[a-z]+$/gm;
+    // let validador = /^[a-z]+\s/gm;
+    let validador = /^[a-z ]+$/;
 
 
     if (texto != "") {
@@ -78,7 +79,7 @@ function encriptar() {
 function desEncriptar() {
     let texto = inputTextArea.value;
     let resultado = "";
-    let validador = /^[a-z]+$/gm;
+    let validador = /^[a-z ]+$/;
     if (texto != "") {
         if (texto.match(validador)) {
             resultado = texto.replaceAll('enter', 'e').replaceAll('imes', 'i').replaceAll('ai', 'a').replaceAll('ober', 'o').replaceAll('ufat', 'u')
