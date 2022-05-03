@@ -47,7 +47,10 @@ function encriptar() {
     let texto = inputTextArea.value;
     let resultado = "";
     // let validador = /^[a-z]+\s/gm;
-    let validador = /^[a-z ]+$/;
+    let validador = /^[^\s]+[a-z ]+$/;
+    // ^[-a-zA-Z0-9-()]+(\s+[-a-zA-Z0-9-()]+)*$
+    // the starting ^ and ending $ denotes the string.
+    // considering the first regex I gave, [^\s]+ means at least one not whitespace and \s+ means at least one white space. Note also that parentheses () groups together the second and third fragments and * at the end means zero or more of this group. So, if you take a look, the expression is: begins with at least one non whitespace and ends with any number of groups of at least one whitespace followed by at least one non whitespace.
 
 
     if (texto != "") {
@@ -79,7 +82,7 @@ function encriptar() {
 function desEncriptar() {
     let texto = inputTextArea.value;
     let resultado = "";
-    let validador = /^[a-z ]+$/;
+    let validador = /^[^\s]+[a-z ]+$/;
     if (texto != "") {
         if (texto.match(validador)) {
             resultado = texto.replaceAll('enter', 'e').replaceAll('imes', 'i').replaceAll('ai', 'a').replaceAll('ober', 'o').replaceAll('ufat', 'u')
